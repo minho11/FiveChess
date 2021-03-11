@@ -1,4 +1,5 @@
-public interface para {
+public interface Para
+{
     final int TABLE_WIDTH=535;
     final int TABLE_HEIGHT=536;
 

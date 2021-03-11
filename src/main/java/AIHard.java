@@ -1,11 +1,11 @@
 import java.util.HashMap;
 
-public class mode_diff_AI implements para, AI {
+public class AIHard implements Para, AI {
     public int board_type;
-    public fivechess f;
+    public Fivechess f;
     HashMap<String, Integer> hm = new HashMap<String, Integer>();
 
-    public mode_diff_AI(int board_type, fivechess f) {
+    public AIHard(int board_type, Fivechess f) {
         this.board_type = board_type;
         this.f = f;
     }

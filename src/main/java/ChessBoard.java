@@ -1,9 +1,9 @@
 import java.awt.*;
 
-class Chess_board extends Canvas {
-    private final fivechess fivechess;
+class ChessBoard extends Canvas {
+    private final Fivechess fivechess;
 
-    public Chess_board(fivechess fivechess) {
+    public ChessBoard(Fivechess fivechess) {
         this.fivechess = fivechess;
     }
 

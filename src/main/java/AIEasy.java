@@ -30,8 +30,9 @@ public class AIEasy implements Para, AI
         }
 
     }
+//    int[] s = {7, 35, 800, 15000, 800000, 15, 400, 1800, 100000};
 
-//    int[] s = {7, 35, 800, 15000, 800000, 15, 400, 1800, 100000, 0, 0};
+    int[] s = {7, 35, 800, 15000, 800000, 15, 400, 1800, 100000};
 
     private int valuate(int count, int count_black, int count_white)
     {
@@ -41,39 +42,39 @@ public class AIEasy implements Para, AI
         {
             if (count_black == 0 && count_white == 0)
             {
-                value += 7;
+                value += s[0];
             }
             else if (count_black == 1 && count_white == 0)
             {
-                value += 35;
+                value += s[1];
             }
             else if (count_black == 2 && count_white == 0)
             {
-                value += 800;
+                value += s[2];
             }
             else if (count_black == 3 && count_white == 0)
             {
-                value += 15000;
+                value += s[3];
             }
             else if (count_black == 4 && count_white == 0)
             {
-                value += 80000;
+                value += s[4];
             }
             else if (count_black == 0 && count_white == 1)
             {
-                value += 15;
+                value += s[5];
             }
             else if (count_black == 0 && count_white == 2)
             {
-                value += 400;
+                value += s[6];
             }
             else if (count_black == 0 && count_white == 3)
             {
-                value += 1800;
+                value += s[7];
             }
             else if (count_black == 0 && count_white == 4)
             {
-                value += 100000;
+                value += s[8];
             }
         }
 
@@ -91,6 +92,9 @@ public class AIEasy implements Para, AI
         for (int i = 0; i < 5 && x - i >= 0; i++)
         {
             count = 0;
+            count_black = 0;
+            count_white = 0;
+
             for (int j = 0; j < 5 && (x - i + j) < BOARD_SIZE && (x - i + j) >= 0; j ++)
             {
                 if (f.board[x - i + j][y] == -1)
@@ -120,6 +124,8 @@ public class AIEasy implements Para, AI
         for (int i = 0; i < 5 && x - i >= 0; i++)
         {
             count = 0;
+            count_black = 0;
+            count_white = 0;
             for (int j = 0; j < 5 && (y - i + j) < BOARD_SIZE && (y - i + j) >= 0; j ++)
             {
                 if (f.board[x][y - i + j] == -1)
@@ -149,6 +155,8 @@ public class AIEasy implements Para, AI
         for (int i = 0; i < 5 && x - i >= 0; i++)
         {
             count = 0;
+            count_black = 0;
+            count_white = 0;
             for (int j = 0; j < 5 && (x - i + j) < BOARD_SIZE && (x - i + j) >= 0
                     && (y + i - j) < BOARD_SIZE && (y + i - j) >= 0; j ++)
             {
@@ -179,6 +187,8 @@ public class AIEasy implements Para, AI
         for (int i = 0; i < 5 && x - i >= 0; i++)
         {
             count = 0;
+            count_black = 0;
+            count_white = 0;
             for (int j = 0; j < 5 && (x - i + j) < BOARD_SIZE && (x - i + j) >= 0
                     && (y - i + j) < BOARD_SIZE && (y - i + j) >= 0; j ++)
             {

@@ -51,7 +51,6 @@ public class Fivechess
         b2.setBackground(b2color);
         b3.setBackground(b3color);
         b4.setBackground(b4color);
-
     }
 
     private void init()
@@ -84,7 +83,6 @@ public class Fivechess
             }
             chess_board.repaint();
         });
-
 
         jpanel.add(b2);
         jpanel.add(b1);
